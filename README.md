@@ -1,7 +1,6 @@
  
 Believe you can and you're halfway there." — Theodore Roosevelt
 
-HTML
 
 <!DOCTYPE html>
 <html lang="id">
