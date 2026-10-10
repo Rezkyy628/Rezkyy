@@ -1,6 +1,4 @@
- 
-Believe you can and you're halfway there." — Theodore Roosevelt
-
+don't forget about your god
 
 <!DOCTYPE html>
 <html lang="id">
@@ -171,6 +169,51 @@ footer {
   border-top: 1px solid #333;
   font-size: 13px;
 }
+
+/* LOGO INSTAGRAM DAN WHATSAPP */
+.social-title {
+  margin-top: 28px;
+  color: #c9fa65;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0 24px;
+}
+
+.social-icons a {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #191a17;
+  border: 1px solid #36382f;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #c9fa6544;
+  border-color: #c9fa65;
+}
+
+.social-icons svg {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icons .instagram {
+  color: #E1306C;
+}
+
+.social-icons .whatsapp {
+  color: #25D366;
+}
 </style>
 </head>
 
@@ -201,7 +244,6 @@ footer {
     <a href="#kontak" class="btn btn-outline">Hubungi Saya</a>
   </div>
 
-  <!-- Ganti foto.jpg dengan foto kamu -->
   <img src="foto.jpg" alt="Foto REZKY ADIYA"
        class="profile">
 </section>
@@ -276,11 +318,46 @@ footer {
   <h2>Mari Terhubung.</h2>
   <p>Silakan hubungi atau kunjungi media sosial saya.</p>
 
+  <!-- LOGO MEDIA SOSIAL -->
+  <div class="social-title">TEMUKAN SAYA DI</div>
+
+  <div class="social-icons">
+
+    <!-- Logo Instagram -->
+    <a class="instagram"
+       href="https://instagram.com/kyy_cavalry"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Buka Instagram">
+      <svg viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1"
+                fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
+
+    <!-- Logo WhatsApp -->
+    <a class="whatsapp"
+       href="https://wa.me/6283897256809"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Buka WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.8"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7a8.5 8.5 0 1 1 16.3-3.8Z"/>
+        <path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.5l.8 1.8c.1.3 0 .5-.2.7l-.6.7c-.2.2-.2.4 0 .7.6 1 1.4 1.8 2.5 2.3.3.1.5.1.7-.1l.9-1c.2-.2.4-.3.7-.2l1.8.9c.3.2.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.1-.2-2.4-.8-3.8-2-1.1-1-2-2.3-2.5-3.4-.5-1.1-.1-2 .1-2.3Z"/>
+      </svg>
+    </a>
+
+  </div>
+
   <div class="info">
     <div class="info-item">
       <strong>WHATSAPP</strong>
       <a href="https://wa.me/6283897256809"
-         target="_blank" rel="noopener">
+         target="_blank" rel="noopener noreferrer">
         0838-9725-6809 ↗
       </a>
     </div>
@@ -288,7 +365,7 @@ footer {
     <div class="info-item">
       <strong>INSTAGRAM</strong>
       <a href="https://instagram.com/kyy_cavalry"
-         target="_blank" rel="noopener">
+         target="_blank" rel="noopener noreferrer">
         @kyy_cavalry ↗
       </a>
     </div>
@@ -296,13 +373,13 @@ footer {
 
   <a class="btn"
      href="https://wa.me/6283897256809"
-     target="_blank" rel="noopener">
+     target="_blank" rel="noopener noreferrer">
     Chat WhatsApp
   </a>
 
   <a class="btn btn-outline"
      href="https://instagram.com/kyy_cavalry"
-     target="_blank" rel="noopener">
+     target="_blank" rel="noopener noreferrer">
     Instagram Saya
   </a>
 </section>
@@ -313,4 +390,3 @@ footer {
 
 </body>
 </html>
-
