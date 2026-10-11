@@ -1,69 +1,454 @@
-  <div class="social-icons">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Logo Instagram -->
-    <a class="instagram"
-       href="https://instagram.com/kyy_cavalry"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Buka Instagram">
-      <svg viewBox="0 0 24 24" fill="none"
-           stroke="currentColor" stroke-width="2"
-           stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="5"/>
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="17.5" cy="6.5" r="1"
-                fill="currentColor" stroke="none"/>
-      </svg>
-    </a>
+  <title>REZKY ADITYA | Personal Website</title>
 
-    <!-- Logo WhatsApp -->
-    <a class="whatsapp"
-       href="https://wa.me/6283897256809"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Buka WhatsApp">
-      <svg viewBox="0 0 24 24" fill="none"
-           stroke="currentColor" stroke-width="1.8"
-           stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7a8.5 8.5 0 1 1 16.3-3.8Z"/>
-        <path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.5l.8 1.8c.1.3 0 .5-.2.7l-.6.7c-.2.2-.2.4 0 .7.6 1 1.4 1.8 2.5 2.3.3.1.5.1.7-.1l.9-1c.2-.2.4-.3.7-.2l1.8.9c.3.2.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.1-.2-2.4-.8-3.8-2-1.1-1-2-2.3-2.5-3.4-.5-1.1-.1-2 .1-2.3Z"/>
-      </svg>
-    </a>
+  <meta name="description"
+        content="Website personal Rezky Aditya. Temukan media sosial dan hubungi saya.">
 
-  </div>
+  <style>
+    /* =========================
+       PENGATURAN DASAR
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <div class="info">
-    <div class="info-item">
-      <strong>WHATSAPP</strong>
-      <a href="https://wa.me/6283897256809"
-         target="_blank" rel="noopener noreferrer">
-        0838-9725-6809 ↗
-      </a>
-    </div>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <div class="info-item">
-      <strong>INSTAGRAM</strong>
-      <a href="https://instagram.com/kyy_cavalry"
-         target="_blank" rel="noopener noreferrer">
-        @kyy_cavalry ↗
-      </a>
-    </div>
-  </div>
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(
+          circle at top,
+          #18233d 0%,
+          #080b14 48%,
+          #050609 100%
+        );
+      color: #ffffff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
 
-  <a class="btn"
-     href="https://wa.me/6283897256809"
-     target="_blank" rel="noopener noreferrer">
-    Chat WhatsApp
-  </a>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  <a class="btn btn-outline"
-     href="https://instagram.com/kyy_cavalry"
-     target="_blank" rel="noopener noreferrer">
-    Instagram Saya
-  </a>
-</section>
+    /* =========================
+       BAGIAN UTAMA
+    ========================= */
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 35px 20px 25px;
+    }
 
-<footer>
-  © 2026 REZKY ADITYA — Personal Website
-</footer>
+    .profile {
+      text-align: center;
+      padding: 35px 20px 25px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      margin-bottom: 20px;
+      border: 1px solid #354568;
+      border-radius: 30px;
+      background: rgba(38, 57, 91, 0.35);
+      color: #9cc8ff;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .profile h1 {
+      font-size: clamp(30px, 7vw, 48px);
+      line-height: 1.2;
+      letter-spacing: 2px;
+      overflow-wrap: anywhere;
+    }
+
+    .profile h1 span {
+      color: #67a8ff;
+      text-shadow: 0 0 25px rgba(70, 145, 255, 0.25);
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      color: #a4adbd;
+      font-size: 14px;
+    }
+
+    .description {
+      max-width: 500px;
+      margin: 16px auto 0;
+      color: #c0c6d3;
+      font-size: 14px;
+    }
+
+    /* =========================
+       KARTU MEDIA SOSIAL
+    ========================= */
+    .social-card {
+      max-width: 620px;
+      margin: 25px auto;
+      padding: 24px;
+      background: rgba(17, 22, 35, 0.88);
+      border: 1px solid #252e42;
+      border-radius: 20px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    }
+
+    .social-card h2 {
+      margin-bottom: 20px;
+      font-size: 17px;
+      letter-spacing: 1px;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* UKURAN LOGO DIKUNCI AGAR TIDAK MEMBESAR */
+    .social-icons a {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 44px;
+      border-radius: 13px;
+      border: 1px solid #303a50;
+      background: #151c2b;
+      transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-3px);
+    }
+
+    .social-icons .instagram {
+      color: #ff80bc;
+    }
+
+    .social-icons .instagram:hover {
+      background: #382039;
+      border-color: #e65aab;
+    }
+
+    .social-icons .whatsapp {
+      color: #45e58c;
+    }
+
+    .social-icons .whatsapp:hover {
+      background: #123526;
+      border-color: #32c978;
+    }
+
+    /* PENTING: SVG TIDAK BOLEH MENGIKUTI UKURAN LAYAR */
+    .social-icons svg {
+      display: block;
+      width: 22px !important;
+      height: 22px !important;
+      min-width: 22px;
+      min-height: 22px;
+      max-width: 22px;
+      max-height: 22px;
+      flex: 0 0 22px;
+      overflow: hidden;
+    }
+
+    /* =========================
+       INFORMASI KONTAK
+    ========================= */
+    .info {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .info-item {
+      min-width: 0;
+      padding: 18px;
+      background: #111623;
+      border: 1px solid #252e42;
+      border-radius: 15px;
+    }
+
+    .info-item strong {
+      display: block;
+      margin-bottom: 7px;
+      color: #8493ad;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+    }
+
+    .info-item a {
+      display: inline-block;
+      max-width: 100%;
+      color: #e8edf8;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+      transition: color 0.2s ease;
+    }
+
+    .info-item a:hover {
+      color: #72b1ff;
+    }
+
+    /* =========================
+       TOMBOL
+    ========================= */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border: 1px solid #5599ff;
+      border-radius: 12px;
+      background: #3984f6;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: bold;
+      text-align: center;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #246bda;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: #39445b;
+      color: #dce5f6;
+    }
+
+    .btn-outline:hover {
+      background: #171f30;
+      border-color: #5599ff;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      margin-top: 45px;
+      padding: 22px 10px;
+      border-top: 1px solid #202738;
+      color: #737f94;
+      font-size: 11px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       TAMPILAN HP
+    ========================= */
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 14px;
+      }
+
+      .profile {
+        padding: 30px 5px 20px;
+      }
+
+      .social-card {
+        padding: 19px;
+        border-radius: 16px;
+      }
+
+      .info {
+        gap: 10px;
+      }
+
+      .info-item {
+        padding: 13px 11px;
+      }
+
+      .info-item a {
+        font-size: 12px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      footer {
+        margin-top: 30px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- PROFIL -->
+    <section class="profile">
+      <div class="badge">PERSONAL WEBSITE</div>
+
+      <h1>REZKY <span>ADITYA</span></h1>
+
+      <p class="subtitle">
+        Welcome to My Personal Website
+      </p>
+
+      <p class="description">
+        Selamat datang di website personal saya.
+        Temukan media sosial dan hubungi saya melalui tautan di bawah ini.
+      </p>
+    </section>
+
+    <!-- MEDIA SOSIAL -->
+    <section class="social-card">
+      <h2>Media Sosial</h2>
+
+      <div class="social-icons">
+
+        <!-- INSTAGRAM -->
+        <a class="instagram"
+           href="https://instagram.com/kyy_cavalry"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Buka Instagram">
+
+          <svg viewBox="0 0 24 24"
+               width="22"
+               height="22"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               aria-hidden="true">
+            <rect x="3" y="3"
+                  width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1"
+                    fill="currentColor"
+                    stroke="none"/>
+          </svg>
+        </a>
+
+        <!-- WHATSAPP -->
+        <a class="whatsapp"
+           href="https://wa.me/6283897256809"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Buka WhatsApp">
+
+          <svg viewBox="0 0 24 24"
+               width="22"
+               height="22"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               aria-hidden="true">
+            <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7a8.5 8.5 0 1 1 16.3-3.8Z"/>
+            <path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.5l.8 1.8c.1.3 0 .5-.2.7l-.6.7c-.2.2-.2.4 0 .7.6 1 1.4 1.8 2.5 2.3.3.1.5.1.7-.1l.9-1c.2-.2.4-.3.7-.2l1.8.9c.3.2.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.1-.2-2.4-.8-3.8-2-1.1-1-2-2.3-2.5-3.4-.5-1.1-.1-2 .1-2.3Z"/>
+          </svg>
+        </a>
+
+      </div>
+
+      <!-- INFORMASI KONTAK -->
+      <div class="info">
+
+        <div class="info-item">
+          <strong>WHATSAPP</strong>
+
+          <a href="https://wa.me/6283897256809"
+             target="_blank"
+             rel="noopener noreferrer">
+            0838-9725-6809 ↗
+          </a>
+        </div>
+
+        <div class="info-item">
+          <strong>INSTAGRAM</strong>
+
+          <a href="https://instagram.com/kyy_cavalry"
+             target="_blank"
+             rel="noopener noreferrer">
+            @kyy_cavalry ↗
+          </a>
+        </div>
+
+      </div>
+
+      <!-- TOMBOL KONTAK -->
+      <div class="buttons">
+
+        <a class="btn"
+           href="https://wa.me/6283897256809"
+           target="_blank"
+           rel="noopener noreferrer">
+          Chat WhatsApp
+        </a>
+
+        <a class="btn btn-outline"
+           href="https://instagram.com/kyy_cavalry"
+           target="_blank"
+           rel="noopener noreferrer">
+          Instagram Saya
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 REZKY ADITYA — Personal Website
+  </footer>
 
 </body>
 </html>
