@@ -5,7 +5,7 @@ don't forget about your god
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REZKY ADIYA | Personal Website</title>
+<title>REZKY ADITYA | Personal Website</title>
 
 <style>
 * {
@@ -231,7 +231,7 @@ footer {
 <section class="hero">
   <div class="tag">✦ PERSONAL WEBSITE</div>
 
-  <h1>HALO,<br>SAYA <span>REZKY ADIYA.</span></h1>
+  <h1>HALO,<br>SAYA <span>REZKY ADITYA.</span></h1>
 
   <p>
     Selamat datang di website pribadi saya.
@@ -253,9 +253,9 @@ footer {
   <h2>Tentang Saya.</h2>
 
   <div class="card">
-    <h3>REZKY ADIYA</h3>
+    <h3>REZKY ADITYA</h3>
     <p>
-      Halo semuanya! Nama saya Rezky Adiya.
+      Halo semuanya! Nama saya Rezky Aditya.
       Saya adalah siswa kelas XII TKJ 1.
       Website ini merupakan halaman pribadi
       untuk memperkenalkan diri dan hobi saya.
@@ -265,7 +265,7 @@ footer {
   <div class="info">
     <div class="info-item">
       <strong>NAMA LENGKAP</strong>
-      REZKY ADIYA
+      REZKY ADITYA
     </div>
 
     <div class="info-item">
@@ -305,7 +305,7 @@ footer {
 
   <div class="card">
     <img src="sport.jpg" alt="Menonton sport">
-    <h3>03. Menonton Sport 🏆</h3>
+    <h3>03. Menonton Formula 1 🏆</h3>
     <p>
       Menonton pertandingan dan menikmati
       keseruan dunia olahraga.
@@ -385,7 +385,7 @@ footer {
 </section>
 
 <footer>
-  © 2026 REZKY ADIYA — Personal Website
+  © 2026 REZKY ADITYA — Personal Website
 </footer>
 
 </body>
