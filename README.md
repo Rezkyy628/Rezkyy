@@ -1,392 +1,454 @@
-don't forget about your god
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>REZKY ADITYA | Personal Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+  <title>REZKY ADITYA | Personal Website</title>
 
-body {
-  font-family: Arial, sans-serif;
-  background: #10110f;
-  color: #f5f5f0;
-  line-height: 1.7;
-}
+  <meta name="description"
+        content="Website personal Rezky Aditya. Temukan media sosial dan hubungi saya.">
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 7%;
-  border-bottom: 1px solid #333;
-  position: sticky;
-  top: 0;
-  background: #10110f;
-  z-index: 10;
-}
+  <style>
+    /* =========================
+       PENGATURAN DASAR
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.logo {
-  color: #c9fa65;
-  font-weight: bold;
-  font-size: 20px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
-  margin-left: 10px;
-}
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(
+          circle at top,
+          #18233d 0%,
+          #080b14 48%,
+          #050609 100%
+        );
+      color: #ffffff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
 
-section {
-  padding: 65px 7%;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.tag {
-  color: #c9fa65;
-  font-size: 13px;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-}
+    /* =========================
+       BAGIAN UTAMA
+    ========================= */
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 35px 20px 25px;
+    }
 
-.hero {
-  min-height: 88vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
+    .profile {
+      text-align: center;
+      padding: 35px 20px 25px;
+    }
 
-h1 {
-  font-size: clamp(42px, 10vw, 76px);
-  line-height: 1.12;
-  margin-bottom: 20px;
-}
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      margin-bottom: 20px;
+      border: 1px solid #354568;
+      border-radius: 30px;
+      background: rgba(38, 57, 91, 0.35);
+      color: #9cc8ff;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
 
-h1 span {
-  color: #c9fa65;
-}
+    .profile h1 {
+      font-size: clamp(30px, 7vw, 48px);
+      line-height: 1.2;
+      letter-spacing: 2px;
+      overflow-wrap: anywhere;
+    }
 
-p {
-  color: #bcbeb5;
-  margin-bottom: 18px;
-}
+    .profile h1 span {
+      color: #67a8ff;
+      text-shadow: 0 0 25px rgba(70, 145, 255, 0.25);
+    }
 
-.btn {
-  display: inline-block;
-  padding: 11px 20px;
-  background: #c9fa65;
-  color: #10110f;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  margin: 8px 5px 8px 0;
-  border: none;
-  cursor: pointer;
-}
+    .subtitle {
+      margin-top: 12px;
+      color: #a4adbd;
+      font-size: 14px;
+    }
 
-.btn-outline {
-  background: transparent;
-  border: 1px solid #c9fa65;
-  color: #c9fa65;
-}
+    .description {
+      max-width: 500px;
+      margin: 16px auto 0;
+      color: #c0c6d3;
+      font-size: 14px;
+    }
 
-.profile {
-  width: 100%;
-  max-width: 320px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 18px;
-  margin-top: 28px;
-  background: #252720;
-}
+    /* =========================
+       KARTU MEDIA SOSIAL
+    ========================= */
+    .social-card {
+      max-width: 620px;
+      margin: 25px auto;
+      padding: 24px;
+      background: rgba(17, 22, 35, 0.88);
+      border: 1px solid #252e42;
+      border-radius: 20px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    }
 
-h2 {
-  font-size: 34px;
-  line-height: 1.2;
-  margin-bottom: 22px;
-}
+    .social-card h2 {
+      margin-bottom: 20px;
+      font-size: 17px;
+      letter-spacing: 1px;
+    }
 
-.card {
-  background: #191a17;
-  border: 1px solid #36382f;
-  border-radius: 16px;
-  padding: 23px;
-  margin-top: 18px;
-}
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-.card h3 {
-  color: #c9fa65;
-  margin-bottom: 10px;
-}
+    /* UKURAN LOGO DIKUNCI AGAR TIDAK MEMBESAR */
+    .social-icons a {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 44px;
+      border-radius: 13px;
+      border: 1px solid #303a50;
+      background: #151c2b;
+      transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
 
-.card img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  background: #252720;
-}
+    .social-icons a:hover {
+      transform: translateY(-3px);
+    }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+    .social-icons .instagram {
+      color: #ff80bc;
+    }
 
-.info-item {
-  padding: 14px;
-  border: 1px solid #36382f;
-  border-radius: 10px;
-  overflow-wrap: anywhere;
-}
+    .social-icons .instagram:hover {
+      background: #382039;
+      border-color: #e65aab;
+    }
 
-.info-item strong {
-  display: block;
-  color: #c9fa65;
-  font-size: 13px;
-}
+    .social-icons .whatsapp {
+      color: #45e58c;
+    }
 
-.info-item a {
-  color: white;
-  text-decoration: none;
-}
+    .social-icons .whatsapp:hover {
+      background: #123526;
+      border-color: #32c978;
+    }
 
-footer {
-  text-align: center;
-  padding: 25px 7%;
-  color: #888;
-  border-top: 1px solid #333;
-  font-size: 13px;
-}
+    /* PENTING: SVG TIDAK BOLEH MENGIKUTI UKURAN LAYAR */
+    .social-icons svg {
+      display: block;
+      width: 22px !important;
+      height: 22px !important;
+      min-width: 22px;
+      min-height: 22px;
+      max-width: 22px;
+      max-height: 22px;
+      flex: 0 0 22px;
+      overflow: hidden;
+    }
 
-/* LOGO INSTAGRAM DAN WHATSAPP */
-.social-title {
-  margin-top: 28px;
-  color: #c9fa65;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
+    /* =========================
+       INFORMASI KONTAK
+    ========================= */
+    .info {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 25px;
+    }
 
-.social-icons {
-  display: flex;
-  gap: 16px;
-  margin: 16px 0 24px;
-}
+    .info-item {
+      min-width: 0;
+      padding: 18px;
+      background: #111623;
+      border: 1px solid #252e42;
+      border-radius: 15px;
+    }
 
-.social-icons a {
-  width: 58px;
-  height: 58px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  background: #191a17;
-  border: 1px solid #36382f;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+    .info-item strong {
+      display: block;
+      margin-bottom: 7px;
+      color: #8493ad;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+    }
 
-.social-icons a:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px #c9fa6544;
-  border-color: #c9fa65;
-}
+    .info-item a {
+      display: inline-block;
+      max-width: 100%;
+      color: #e8edf8;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+      transition: color 0.2s ease;
+    }
 
-.social-icons svg {
-  width: 30px;
-  height: 30px;
-}
+    .info-item a:hover {
+      color: #72b1ff;
+    }
 
-.social-icons .instagram {
-  color: #E1306C;
-}
+    /* =========================
+       TOMBOL
+    ========================= */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
+    }
 
-.social-icons .whatsapp {
-  color: #25D366;
-}
-</style>
+    .btn {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border: 1px solid #5599ff;
+      border-radius: 12px;
+      background: #3984f6;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: bold;
+      text-align: center;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #246bda;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: #39445b;
+      color: #dce5f6;
+    }
+
+    .btn-outline:hover {
+      background: #171f30;
+      border-color: #5599ff;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      margin-top: 45px;
+      padding: 22px 10px;
+      border-top: 1px solid #202738;
+      color: #737f94;
+      font-size: 11px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       TAMPILAN HP
+    ========================= */
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 14px;
+      }
+
+      .profile {
+        padding: 30px 5px 20px;
+      }
+
+      .social-card {
+        padding: 19px;
+        border-radius: 16px;
+      }
+
+      .info {
+        gap: 10px;
+      }
+
+      .info-item {
+        padding: 13px 11px;
+      }
+
+      .info-item a {
+        font-size: 12px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      footer {
+        margin-top: 30px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">REZKY.</div>
-  <nav>
-    <a href="#tentang">Profil</a>
-    <a href="#hobi">Hobi</a>
-    <a href="#kontak">Kontak</a>
-  </nav>
-</header>
+  <main class="container">
 
-<section class="hero">
-  <div class="tag">✦ PERSONAL WEBSITE</div>
+    <!-- PROFIL -->
+    <section class="profile">
+      <div class="badge">PERSONAL WEBSITE</div>
 
-  <h1>HALO,<br>SAYA <span>REZKY ADITYA.</span></h1>
+      <h1>REZKY <span>ADITYA</span></h1>
 
-  <p>
-    Selamat datang di website pribadi saya.
-    Kenali saya lebih dekat melalui profil,
-    hobi, dan media sosial saya.
-  </p>
+      <p class="subtitle">
+        Welcome to My Personal Website
+      </p>
 
-  <div>
-    <a href="#tentang" class="btn">Tentang Saya ↓</a>
-    <a href="#kontak" class="btn btn-outline">Hubungi Saya</a>
-  </div>
+      <p class="description">
+        Selamat datang di website personal saya.
+        Temukan media sosial dan hubungi saya melalui tautan di bawah ini.
+      </p>
+    </section>
 
-  <img src="foto.jpg" alt="Foto REZKY ADIYA"
-       class="profile">
-</section>
+    <!-- MEDIA SOSIAL -->
+    <section class="social-card">
+      <h2>Media Sosial</h2>
 
-<section id="tentang">
-  <div class="tag">01 — PROFIL</div>
-  <h2>Tentang Saya.</h2>
+      <div class="social-icons">
 
-  <div class="card">
-    <h3>REZKY ADITYA</h3>
-    <p>
-      Halo semuanya! Nama saya Rezky Aditya.
-      Saya adalah siswa kelas XII TKJ 1.
-      Website ini merupakan halaman pribadi
-      untuk memperkenalkan diri dan hobi saya.
-    </p>
-  </div>
+        <!-- INSTAGRAM -->
+        <a class="instagram"
+           href="https://instagram.com/kyy_cavalry"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Buka Instagram">
 
-  <div class="info">
-    <div class="info-item">
-      <strong>NAMA LENGKAP</strong>
-      REZKY ADITYA
-    </div>
+          <svg viewBox="0 0 24 24"
+               width="22"
+               height="22"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               aria-hidden="true">
+            <rect x="3" y="3"
+                  width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1"
+                    fill="currentColor"
+                    stroke="none"/>
+          </svg>
+        </a>
 
-    <div class="info-item">
-      <strong>KELAS</strong>
-      XII TKJ 1
-    </div>
+        <!-- WHATSAPP -->
+        <a class="whatsapp"
+           href="https://wa.me/6283897256809"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Buka WhatsApp">
 
-    <div class="info-item">
-      <strong>HOBI</strong>
-      Bermain bola, jalan-jalan, dan menonton sport
-    </div>
-  </div>
-</section>
+          <svg viewBox="0 0 24 24"
+               width="22"
+               height="22"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="1.8"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               aria-hidden="true">
+            <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7a8.5 8.5 0 1 1 16.3-3.8Z"/>
+            <path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.5l.8 1.8c.1.3 0 .5-.2.7l-.6.7c-.2.2-.2.4 0 .7.6 1 1.4 1.8 2.5 2.3.3.1.5.1.7-.1l.9-1c.2-.2.4-.3.7-.2l1.8.9c.3.2.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.1-.2-2.4-.8-3.8-2-1.1-1-2-2.3-2.5-3.4-.5-1.1-.1-2 .1-2.3Z"/>
+          </svg>
+        </a>
 
-<section id="hobi">
-  <div class="tag">02 — AKTIVITAS</div>
-  <h2>Hobi Saya.</h2>
-  <p>Beberapa hal yang saya suka lakukan.</p>
+      </div>
 
-  <div class="card">
-    <img src="bola.jpg" alt="Bermain bola">
-    <h3>01. Bermain Bola ⚽</h3>
-    <p>
-      Menikmati olahraga, bermain bersama teman,
-      dan menjaga semangat sportif.
-    </p>
-  </div>
+      <!-- INFORMASI KONTAK -->
+      <div class="info">
 
-  <div class="card">
-    <img src="jalan.jpg" alt="Jalan-jalan">
-    <h3>02. Jalan-Jalan 🌄</h3>
-    <p>
-      Menjelajahi tempat baru dan menikmati
-      pengalaman yang menyenangkan.
-    </p>
-  </div>
+        <div class="info-item">
+          <strong>WHATSAPP</strong>
 
-  <div class="card">
-    <img src="sport.jpg" alt="Menonton sport">
-    <h3>03. Menonton Formula 1 🏆</h3>
-    <p>
-      Menonton pertandingan dan menikmati
-      keseruan dunia olahraga.
-    </p>
-  </div>
-</section>
+          <a href="https://wa.me/6283897256809"
+             target="_blank"
+             rel="noopener noreferrer">
+            0838-9725-6809 ↗
+          </a>
+        </div>
 
-<section id="kontak">
-  <div class="tag">03 — HUBUNGI SAYA</div>
-  <h2>Mari Terhubung.</h2>
-  <p>Silakan hubungi atau kunjungi media sosial saya.</p>
+        <div class="info-item">
+          <strong>INSTAGRAM</strong>
 
-  <!-- LOGO MEDIA SOSIAL -->
-  <div class="social-title">TEMUKAN SAYA DI</div>
+          <a href="https://instagram.com/kyy_cavalry"
+             target="_blank"
+             rel="noopener noreferrer">
+            @kyy_cavalry ↗
+          </a>
+        </div>
 
-  <div class="social-icons">
+      </div>
 
-    <!-- Logo Instagram -->
-    <a class="instagram"
-       href="https://instagram.com/kyy_cavalry"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Buka Instagram">
-      <svg viewBox="0 0 24 24" fill="none"
-           stroke="currentColor" stroke-width="2"
-           stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="5"/>
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="17.5" cy="6.5" r="1"
-                fill="currentColor" stroke="none"/>
-      </svg>
-    </a>
+      <!-- TOMBOL KONTAK -->
+      <div class="buttons">
 
-    <!-- Logo WhatsApp -->
-    <a class="whatsapp"
-       href="https://wa.me/6283897256809"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Buka WhatsApp">
-      <svg viewBox="0 0 24 24" fill="none"
-           stroke="currentColor" stroke-width="1.8"
-           stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7a8.5 8.5 0 1 1 16.3-3.8Z"/>
-        <path d="M8.5 8.2c.3-.6.6-.6 1-.6h.4c.2 0 .4.1.5.5l.8 1.8c.1.3 0 .5-.2.7l-.6.7c-.2.2-.2.4 0 .7.6 1 1.4 1.8 2.5 2.3.3.1.5.1.7-.1l.9-1c.2-.2.4-.3.7-.2l1.8.9c.3.2.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.1-.2-2.4-.8-3.8-2-1.1-1-2-2.3-2.5-3.4-.5-1.1-.1-2 .1-2.3Z"/>
-      </svg>
-    </a>
+        <a class="btn"
+           href="https://wa.me/6283897256809"
+           target="_blank"
+           rel="noopener noreferrer">
+          Chat WhatsApp
+        </a>
 
-  </div>
+        <a class="btn btn-outline"
+           href="https://instagram.com/kyy_cavalry"
+           target="_blank"
+           rel="noopener noreferrer">
+          Instagram Saya
+        </a>
 
-  <div class="info">
-    <div class="info-item">
-      <strong>WHATSAPP</strong>
-      <a href="https://wa.me/6283897256809"
-         target="_blank" rel="noopener noreferrer">
-        0838-9725-6809 ↗
-      </a>
-    </div>
+      </div>
+    </section>
 
-    <div class="info-item">
-      <strong>INSTAGRAM</strong>
-      <a href="https://instagram.com/kyy_cavalry"
-         target="_blank" rel="noopener noreferrer">
-        @kyy_cavalry ↗
-      </a>
-    </div>
-  </div>
+  </main>
 
-  <a class="btn"
-     href="https://wa.me/6283897256809"
-     target="_blank" rel="noopener noreferrer">
-    Chat WhatsApp
-  </a>
-
-  <a class="btn btn-outline"
-     href="https://instagram.com/kyy_cavalry"
-     target="_blank" rel="noopener noreferrer">
-    Instagram Saya
-  </a>
-</section>
-
-<footer>
-  © 2026 REZKY ADITYA — Personal Website
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 REZKY ADITYA — Personal Website
+  </footer>
 
 </body>
 </html>
